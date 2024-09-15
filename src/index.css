@@ -9,8 +9,8 @@
 @tailwind utilities;
 
 @layer utilities{
-    .active{
-        @apply bg-white
+    .no-scroll{
+        @apply overflow-hidden
     }
 }
 

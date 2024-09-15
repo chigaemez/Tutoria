@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { RiMenu2Line } from 'react-icons/ri'
 import { IoClose } from 'react-icons/io5'
 
@@ -8,11 +8,10 @@ const Header = () => {
 
   const handleToggleMenu = () => {
     SetShowMenu(!showMenu)
-    console.log('toggle menu')
   }
 
   const HandleBgChange = () => {
-    if (window.screenY >= 80) {
+    if (window.scrollY >= 90) {
       setNavbar(true)
     } else {
       setNavbar(false)
@@ -25,55 +24,109 @@ const Header = () => {
     <div
       className={
         navbar
-          ? 'flex items-center justify-between fixed top-0  w-full   px-3 py-5 '
-          : 'flex items-center justify-between  absolute w-full   px-3 py-5 '
+          ? 'flex items-center justify-between fixed top-0 duration-300 ease-in left-0 z-40 w-full bg-white shadow-xl  h-[90px] px-3 py-5 '
+          : 'flex items-center justify-between fixed top-0 duration-300 ease-in left-0 z-40 w-full h-[90px] px-3 py-5 '
       }
     >
       {showMenu && (
         <div class='absolute z-[999] inset-0 flex lg:hidden h-screen bg-black opacity-70 duration-700 ease-in'></div>
       )}
       <div className='flex items-center justify-center'>
-        <h1 className='text-3xl flex font-bold text-white z-50 cursor-pointer '>
+        <h1
+          className={
+            navbar
+              ? 'text-3xl flex font-bold text-black  z-50 cursor-pointer duration-300 ease-in '
+              : 'text-3xl flex font-bold text-white z-50 cursor-pointer duration-300 ease-in '
+          }
+        >
           Tutoria <span>.</span>
         </h1>
       </div>
 
       {/* DESKTOP VIEW */}
 
-      <div
-        className={
-          navbar
-            ? `hidden  px-4 z-50 md:hidden lg:flex  py-4 ${active}   text-white`
-            : 'hidden  px-4 z-50 md:hidden lg:flex  py-4 bg-transparent   text-white'
-        }
-      >
+      <div className='hidden md:hidden lg:flex'>
         <div>
-          <ul className='flex items-center gap-9 '>
-            <li className='text-lg cursor-pointer text-gray-300 hover:text-white font-medium'>
+          <ul className='flex items-center gap-9'>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
               Home
             </li>
-            <li className='text-lg cursor-pointer text-gray-300 hover:text-white font-medium'>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
               About
             </li>
-            <li className='text-lg cursor-pointer text-gray-300 hover:text-white font-medium'>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
               Services
             </li>
-            <li className='text-lg cursor-pointer text-gray-300 hover:text-white font-medium'>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
               Portfolios
             </li>
-            <li className='text-lg cursor-pointer text-gray-300 hover:text-white font-medium'>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
               Pricing
             </li>
-            <li className='text-lg cursor-pointer text-gray-300 hover:text-white font-medium'>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
               Team
             </li>
-            <li className='text-lg cursor-pointer text-gray-300 hover:text-white font-medium'>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
               Blog
             </li>
-            <li className='text-lg cursor-pointer text-gray-300 hover:text-white font-medium'>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
               Works
             </li>
-            <li className='text-lg cursor-pointer text-gray-300 hover:text-white font-medium'>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
               Contact
             </li>
           </ul>
@@ -85,7 +138,11 @@ const Header = () => {
         </button>
 
         <div
-          className='flex text-white lg:hidden text-2xl z-50  '
+          className={
+            navbar
+              ? 'flex text-black lg:hidden text-2xl z-50 duration-300 ease-in '
+              : 'flex text-white lg:hidden text-2xl z-50 duration-300 ease-in'
+          }
           onClick={handleToggleMenu}
         >
           <RiMenu2Line />

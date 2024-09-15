@@ -74,28 +74,28 @@ const State = () => {
       style={{ backgroundImage: `url(${statsbg})` }}
       ref={myRef}
     >
-      <div class='absolute inset-0 bg-black opacity-50 w-full '></div>
+      <div className='absolute inset-0 bg-black opacity-50 w-full '></div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4   place-items-center w-[80%] '>
-        <div className='flex z-40 mt-16 lg:mt-0 flex-col w-[80%]  items-center justify-center'>
+        <div className='flex z-[9] mt-16 lg:mt-0 flex-col w-[80%]  items-center justify-center'>
           <h1 className='text-5xl font-medium text-white'>
             {' '}
             {inView ? Client : '0'}
           </h1>
           <p className='text-lg font-semibold text-white'>Clients</p>
         </div>
-        <div className='flex z-40 mt-16 lg:mt-0 flex-col w-[80%]  items-center justify-center'>
+        <div className='flex z-[9] mt-16 lg:mt-0 flex-col w-[80%]  items-center justify-center'>
           <h1 className='text-5xl font-medium text-white'>
             {inView ? Project : '0'}
           </h1>
           <p className='text-lg font-semibold text-white'>Project</p>
         </div>
-        <div className='flex z-40 mt-16 lg:mt-0 flex-col w-[80%]  items-center justify-center'>
+        <div className='flex z-[9] mt-16 lg:mt-0 flex-col w-[80%]  items-center justify-center'>
           <h1 className='text-5xl font-medium text-white'>
             {inView ? support : '0'}
           </h1>
           <p className='text-lg font-semibold text-white'>Hours Of Support</p>
         </div>
-        <div className='flex z-40 mt-16 lg:mt-0 flex-col w-[80%]  items-center justify-center'>
+        <div className='flex z-[9] mt-16 lg:mt-0 flex-col w-[80%]  items-center justify-center'>
           <h1 className='text-5xl font-medium text-white'>
             {inView ? workers : '0'}
           </h1>

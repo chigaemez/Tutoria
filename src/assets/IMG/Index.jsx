@@ -6,3 +6,6 @@ export {default as client4} from './client4.png';
 export {default as client3} from './client3.png';
 export {default as client2} from './client2.png';
 export {default as client1} from './client1.png';
+export {default as features} from './features.jpg';
+export {default as features1} from './features1.jpg';
+export {default as features3} from './features3.jpg';

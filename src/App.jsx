@@ -4,6 +4,8 @@ import About from './Components/About'
 import Header from './Components/Header'
 import Hero from './Components/Hero'
 import { useEffect } from 'react'
+import Service from './Components/Service'
+import Features from './Components/Features'
 
 const AOSInit = ({ children }) => {
   useEffect(() => {
@@ -23,6 +25,8 @@ function App () {
         <Header />
         <Hero />
         <About />
+        <Service/>
+        <Features/>
       </AOSInit>
     </>
   )
