@@ -21,7 +21,7 @@ const Service = () => {
       </div>
 
       <div className=' grid grid-cols-1 mt-6 lg:grid-cols-2 place-items-center lg:px-[10rem] gap-10'>
-        <div className='flex w-full group gap-1'>
+        <div data-aos='fade-up'  className='flex w-full group gap-1'>
           <hr className='w-[10%] z-20 h-[3px] bg-[#d84e4d]' />
           <div className='flex border-t-2 h-[20vh] flex-row  items-center w-[100%] justify-between gap-5 '>
             <div className='relative ml-[-30px]'>
@@ -40,7 +40,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-        <div className='flex w-full group gap-1'>
+        <div data-aos='fade-up'  className='flex w-full group gap-1'>
           <hr className='w-[10%] z-20 h-[3px] bg-[#d84e4d]' />
           <div className='flex border-t-2 h-[20vh] flex-row  items-center w-[100%] justify-between gap-5 '>
             <div className='relative ml-[-30px]'>
@@ -59,7 +59,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-        <div className='flex w-full group gap-1'>
+        <div data-aos='fade-up' data-aos-delay='100'  className='flex w-full group gap-1'>
           <hr className='w-[10%] z-20 h-[3px] bg-[#d84e4d]' />
           <div className='flex border-t-2 h-[20vh] flex-row  items-center w-[100%] justify-between gap-5 '>
             <div className='relative ml-[-30px]'>
@@ -78,7 +78,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-        <div className='flex w-full group gap-1'>
+        <div data-aos='fade-up' data-aos-delay='100' className='flex w-full group gap-1'>
           <hr className='w-[10%] z-20 h-[3px] bg-[#d84e4d]' />
           <div className='flex border-t-2 h-[20vh] flex-row  items-center w-[100%] justify-between gap-5 '>
             <div className='relative ml-[-30px]'>
@@ -97,7 +97,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-        <div className='flex w-full group gap-1'>
+        <div data-aos='fade-up' data-aos-delay='200' className='flex w-full group gap-1'>
           <hr className='w-[10%] z-20 h-[3px] bg-[#d84e4d]' />
           <div className='flex border-t-2 h-[20vh] flex-row  items-center w-[100%] justify-between gap-5 '>
             <div className='relative ml-[-30px]'>
@@ -116,7 +116,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-        <div className='flex w-full group gap-1'>
+        <div data-aos='fade-up' data-aos-delay='200' className='flex w-full group gap-1'>
           <hr className='w-[10%] z-20 h-[3px] bg-[#d84e4d]' />
           <div className='flex border-t-2 h-[20vh] flex-row  items-center w-[100%] justify-between gap-5 '>
             <div className='relative ml-[-30px]'>

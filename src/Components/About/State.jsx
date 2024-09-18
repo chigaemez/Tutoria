@@ -22,10 +22,10 @@ const State = () => {
         } else {
           clearInterval(clientInterval)
         }
-      }, 100)
+      }, 50)
       return () => clearInterval(clientInterval)
     }
-  }, [Client, ClientEnd, 100, inView])
+  }, [Client, ClientEnd, 50, inView])
 
   //PROJECT
   useEffect(() => {
@@ -36,10 +36,10 @@ const State = () => {
         } else {
           clearInterval(projectInterval)
         }
-      }, 0.1)
+      }, 0.9)
       return () => clearInterval(projectInterval)
     }
-  }, [Project, projectEnd, 0.1, inView])
+  }, [Project, projectEnd, 0.9, inView])
 
   // SUPPORT
   useEffect(() => {
@@ -75,7 +75,7 @@ const State = () => {
       ref={myRef}
     >
       <div className='absolute inset-0 bg-black opacity-50 w-full '></div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4   place-items-center w-[80%] '>
+      <div data-aos='fade-up' className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4   place-items-center w-[80%] '>
         <div className='flex z-[9] mt-16 lg:mt-0 flex-col w-[80%]  items-center justify-center'>
           <h1 className='text-5xl font-medium text-white'>
             {' '}

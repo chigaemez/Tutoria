@@ -30,14 +30,14 @@ const Features = () => {
           </button>
         </div>
 
-        <div className='flex lg:w-[50%] relative px-4'>
+        <div className='flex lg:w-[50%] relative px-4' data-aos='zoom-out' >
           <img
-            src={features}
+            src={features1}
             alt=''
             className='lg:w-[600px]  lg:h-[400px] w-[90%] ml-16 -z-10 bg-white p-2 shadow-xl'
           />
           <img
-            src={features1}
+            src={features}
             alt=''
             className='lg:w-[600px] lg:h-[400px] w-[90%] z-10 absolute bg-white p-2 shadow-xl mt-[100px] lg:left-[-100px] left-[-10px]'
           />
@@ -58,7 +58,7 @@ const Features = () => {
           </button>
         </div>
 
-        <div className='flex lg:w-[50%] items-center justify-center  relative'>
+        <div className='flex lg:w-[50%] items-center justify-center  relative ' data-aos='zoom-out-right'>
           <img
             src={features3}
             alt=''
